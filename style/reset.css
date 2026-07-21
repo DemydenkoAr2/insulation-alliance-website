@@ -1,0 +1,107 @@
+@layer reset {
+
+  /* 1. Saner box model everywhere */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* 2. Remove default margins, but only on elements that need it —
+     don't nuke everything blindly */
+  body,
+  h1, h2, h3, h4, h5, h6,
+  p, figure, blockquote, dl, dd {
+    margin: 0;
+  }
+
+  /* 3. Core body defaults */
+  body {
+    min-height: 100svh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* 4. Headings wrap more gracefully — no more lone last word */
+  h1, h2, h3, h4 {
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  /* Long-form paragraphs: better line-breaking without manual hyphens */
+  p {
+    text-wrap: pretty;
+  }
+
+  /* 5. Media is block-level and never overflows its container */
+  img, picture, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 6. Form controls inherit typography instead of using the browser's
+     default UI font */
+  input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  textarea:not([rows]) {
+    min-height: 10em;
+  }
+
+  /* 7. Keep links usable without stripping semantics entirely */
+  a {
+    color: inherit;
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+  }
+
+  /* 8. Lists used purely for layout (nav, cards) lose bullets;
+     lists left with a `role` (real content lists) keep them for a11y */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* 9. Logical properties baseline for RTL/i18n-friendly spacing */
+  * {
+    margin-block: 0;
+  }
+
+  /* 10. Smooth scroll, but respect motion preferences */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* 11. Prevent text overflow from long words/URLs in narrow containers */
+  h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word;
+  }
+
+  /* 12. Root stacking context fix for #app-style layouts */
+  #root, #app {
+    isolation: isolate;
+  }
+
+}
