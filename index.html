@@ -6,68 +6,72 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/fonts.css" />
     <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
-    <header class="container flex justify-between items-center">
-      <a href="index.html" class="logo">Insulation Alliance</a>
-      <nav class="main-nav" aria-label="main navigation">
-        <ul role="list" class="flex justify-between items-center gap-20">
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </nav>
-      <div class="flex gap-16">
-        <a href="tel:+19255551234" class="btn btn-primary">Call Now</a>
-        <a href="contact.html" class="btn btn-secondary"
-          >Schedule an Appointment</a
-        >
+    <header>
+      <div class="section section-header">
+        <div class="container container-header">
+          <div class="logo">
+            <a href="#">Insulation Alliance</a>
+          </div>
+          <nav class="main-nav" aria-label="main navigation">
+            <ul role="list" class="main-nav__list">
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <a href="#" class="btn btn-primary">Call Now</a>
+            <a href="contact.html" class="btn btn-secondary">Schedule an Appointment</a>
+          </div>
+        </div>
       </div>
     </header>
 
-    <footer>
-      <div class="section section-footer">
-        <div class="container container-footer">
-          <div class="title-footer">
-            <h2>Insulation Alliance</h2>
-          </div>
-          <div class="">
-            <nav class="footer-nav">
-              <ul class="footer-nav__column">
-                <li>Socials</li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Yelp</a></li>
-                <li><a href="#">NextDoor</a></li>
-                <li><a href="#">Angie</a></li>
-              </ul>
-              <ul class="footer-nav__column">
-                <li>Navigation</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contacts</a></li>
-              </ul>
-              <ul class="footer-nav__column">
-                <li>Contact</li>
-                <li>hello@insulationalliance.com</li>
-                <li>+1 (000) 000-00-00</li>
-                <li>Mon–Sat, 8am–6pm</li>
-              </ul>
-            </nav>
-          </div>
+<footer>
+  <div class="section section-footer">
+    <div class="container container-footer">
+      <div class="title-footer">
+        <h2>Insulation Alliance</h2>
+      </div>
 
-            <div class="footer-bottom">
-                <div class="footer-bottom__copy">
-                    <p>&copy; 2026 Insulation Alliance. All rights reserved.</p>
-                </div>
-                <div class="footer-bottom__legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
+      <nav class="footer-nav">
+        <ul class="footer-nav__column">
+          <li>Socials</li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Yelp</a></li>
+          <li><a href="#">NextDoor</a></li>
+          <li><a href="#">Angie</a></li>
+        </ul>
+        <ul class="footer-nav__column">
+          <li>Navigation</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+        <ul class="footer-nav__column">
+          <li>Contact</li>
+          <li><span class="copy-link" data-copy="hello@insulationalliance.com">hello@insulationalliance.com</span></li>
+          <li><span class="copy-link" data-copy="+10000000000">+1 (000) 000-00-00</span></li>
+          <li class="footer-nav__column-item">Mon–Sat, 8am–6pm</li>
+        </ul>
+      </nav>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom__copy">
+          <p>&copy; 2026 Insulation Alliance. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</footer>
   </body>
 </html>

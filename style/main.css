@@ -1,40 +1,3 @@
-/* === Размер текста === */
-.text-sm {
-  font-size: 14px;
-}
-.text-base {
-  font-size: 16px;
-}
-.text-lg {
-  font-size: 18px;
-}
-.text-xl {
-  font-size: 24px;
-}
-.text-2xl {
-  font-size: 32px;
-}
-.text-3xl {
-  font-size: 48px;
-}
-
-/* === Насыщенность (используем диапазон вариативного шрифта) === */
-.fw-light {
-  font-weight: 300;
-}
-.fw-regular {
-  font-weight: 400;
-}
-.fw-medium {
-  font-weight: 500;
-}
-.fw-semibold {
-  font-weight: 600;
-}
-.fw-bold {
-  font-weight: 700;
-}
-
 :root {
   --black: #1e1e1e;
   --white: #fcfafa;
@@ -43,22 +6,17 @@
 
   --black-footer: #1c1c1c;
   --orage: #ff8d28;
+  --white-pure: #ffffff;
   --white-warm: #fdf9f5;
+  --text-primary: #202020;
 }
+
+/* * {
+    outline: 1px solid red;
+} */
 
 body {
-  /* font-family: "Inter", sans-serif; */
-  font-family: "Inter Tight", sans-serif;
-  /* font-weight: 400; */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Inter Tight", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 ul {
@@ -67,49 +25,15 @@ ul {
   padding: 0;
 }
 
+.section {
+
+}
+
 .container {
   max-width: 1260px;
   width: 100%;
   margin-inline: auto;
   padding-inline: 24px;
-  /* margin: 0 auto; */
-}
-
-header {
-  height: 98px;
-  align-items: center;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.gap-16 {
-  gap: 16px;
-}
-
-.gap-20 {
-  gap: 20px;
 }
 
 .btn {
@@ -118,9 +42,6 @@ header {
   border-radius: 6px;
   text-decoration: none;
   text-align: center;
-  /* font-size: 16px; */
-  /* font-weight: 500; */
-  /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
 .btn-primary {
@@ -140,12 +61,43 @@ header {
   background-color: var(--mandarin-hover);
 }
 
-/* * {
-    outline: 1px solid red;
-} */
+/* ------ HEADER ------ */
+
+.section-header {
+  background-color: var(--white-pure);
+}
+
+.container-header {
+  width: 100%;
+  max-width: 1280px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Inter Tight";
+  font-size: 20px;
+  /* font-style: normal; */
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.main-nav__list {
+  display: flex;
+  gap: 32px;
+
+  /* Nav Link */
+  font-family: "Inter Tight";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+}
+
 
 /* ------ FOOTER ------ */
-
 .section-footer {
   background-color: var(--black-footer);
   color: var(--white-warm);
@@ -153,17 +105,22 @@ header {
 }
 
 .container-footer {
-  width: 100;
+  width: 100%;
   max-width: 1280px;
-
-  /* padding: 64px 0 32px 0; */
   padding-inline: 24px;
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
 .title-footer {
   margin: 0 0 40px 0;
+}
+
+.title-footer h2 {
+  color: var(--orage);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 104.698%;
+  letter-spacing: 0.4px;
 }
 
 .footer-nav {
@@ -180,11 +137,27 @@ header {
   flex-direction: column;
   gap: 8px;
 
-  /* font-family: Inter; */
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+/* Первый li в каждой колонке — всегда полная непрозрачность */
+.footer-nav__column li:first-child {
+  opacity: 1;
+}
+
+/* Все остальные li (и ссылки/copy-link внутри них) — 0.5, hover 0.9 */
+.footer-nav__column li:not(:first-child) a,
+.footer-nav__column li:not(:first-child) .copy-link {
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.footer-nav__column li:not(:first-child) a:hover,
+.footer-nav__column li:not(:first-child) .copy-link:hover {
+  opacity: 0.9;
 }
 
 .footer-bottom {
@@ -192,8 +165,6 @@ header {
   padding: 24px 0 0 0;
   display: flex;
   justify-content: space-between;
-  /* opacity: 0.5;
-  transition: opacity 0.15s ease; */
 
   font-size: 13px;
   font-style: normal;
@@ -210,26 +181,33 @@ header {
   gap: 8px;
 }
 
-.title-footer h2 {
-  /* font-family: "Inter Tight"; */
-  color: var(--orage);
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 104.698%; /* 52.349px */
-  letter-spacing: 0.4px;
-}
-
-footer a {
+.footer-bottom__legal a {
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }
 
-footer a:hover {
-  opacity: 0.8;
+.footer-bottom__legal a:hover {
+  opacity: 0.9;
 }
 
-/* надо переделать надо задать всем оpacity 0.5 а первым 1 и при новедении 0.8 */
-.footer-nav__column:last-child li:not(:first-child) {
+.copy-link {
+  cursor: pointer;
+  position: relative;
+}
+
+.copy-link.copied::after {
+  content: "Copied!";
+  position: absolute;
+  left: 0;
+  top: -22px;
+  background: var(--orage);
+  color: #000;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.footer-nav__column-item {
   opacity: 0.5;
 }
