@@ -25,10 +25,6 @@ ul {
   padding: 0;
 }
 
-.section {
-
-}
-
 .container {
   max-width: 1260px;
   width: 100%;
@@ -37,7 +33,9 @@ ul {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -47,9 +45,6 @@ ul {
 .btn-primary {
   background-color: var(--black);
   color: var(--white);
-}
-
-.btn-primary:hover {
 }
 
 .btn-secondary {
@@ -68,16 +63,15 @@ ul {
 }
 
 .container-header {
-  width: 100%;
   max-width: 1280px;
-  padding: 24px;
+  padding-block: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-family: "Inter Tight";
+  font-family: "Inter Tight", sans-serif;
   font-size: 20px;
   /* font-style: normal; */
   font-weight: 800;
@@ -90,12 +84,33 @@ ul {
   gap: 32px;
 
   /* Nav Link */
-  font-family: "Inter Tight";
+  font-family: "Inter Tight", sans-serif;
   font-size: 15px;
   font-weight: 500;
   line-height: normal;
 }
 
+/* ------ HERO ------ */
+.section-hero {
+  padding: 40px 0 20px 0;
+}
+
+.service-nav {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 12px;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-img img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
 /* ------ FOOTER ------ */
 .section-footer {
