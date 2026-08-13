@@ -44,12 +44,11 @@
   --black-footer: #1c1c1c;
   --orage: #ff8d28;
   --white-warm: #fdf9f5;
-  
 }
 
 body {
   /* font-family: "Inter", sans-serif; */
-    font-family: "Inter Tight", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   /* font-weight: 400; */
 }
 
@@ -145,18 +144,20 @@ header {
     outline: 1px solid red;
 } */
 
+/* ------ FOOTER ------ */
+
 .section-footer {
   background-color: var(--black-footer);
   color: var(--white-warm);
-   padding: 64px 0 32px 0;
+  padding: 64px 0 32px 0;
 }
 
 .container-footer {
   width: 100;
   max-width: 1280px;
- 
-   /* padding: 64px 0 32px 0; */
-    padding-inline: 24px;
+
+  /* padding: 64px 0 32px 0; */
+  padding-inline: 24px;
   /* display: flex; */
   /* flex-direction: column; */
 }
@@ -179,11 +180,11 @@ header {
   flex-direction: column;
   gap: 8px;
 
-/* font-family: Inter; */
-font-size: 15px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  /* font-family: Inter; */
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .footer-bottom {
@@ -191,12 +192,17 @@ line-height: normal;
   padding: 24px 0 0 0;
   display: flex;
   justify-content: space-between;
-   opacity: 0.6;
+  /* opacity: 0.5;
+  transition: opacity 0.15s ease; */
 
-   font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-bottom__copy {
+  opacity: 0.5;
 }
 
 .footer-bottom__legal {
@@ -214,6 +220,16 @@ line-height: normal;
   letter-spacing: 0.4px;
 }
 
-.footer-nav__column li:not(:first-child) {
-  opacity: 0.6;
+footer a {
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* надо переделать надо задать всем оpacity 0.5 а первым 1 и при новедении 0.8 */
+.footer-nav__column:last-child li:not(:first-child) {
+  opacity: 0.5;
 }
