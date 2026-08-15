@@ -1,16 +1,95 @@
 :root {
-  --black: #1e1e1e;
-  --white: #fcfafa;
-  --mandarin: #f28f4a;
-  --mandarin-hover: #e6862f;
-
-  --black-footer: #1c1c1c;
-  --orage: #ff8d28;
-  --white-pure: #ffffff;
-  --white-warm: #fdf9f5;
-  --text-primary: #202020;
+  --background: #FDF9F5;
+  --white: #FFFFFF;
+  --black: #2E2E2E;
+  --hover: #CC7120;
+  --primary: #FF8D28;
+  --pressed: #FFA453
+  --surface: #FFDCBD;
+  --primary-black: #202020;
+  --secondary: #484848;
+  --tertiary: #9A9A9A;
+  --inverse: #1C1C1C;
 }
 
+/* надо починить цвета */
+
+/* Primary — главные оранжевые кнопки.
+
+Secondary / Dark — темные залитые кнопки.
+
+Outline / Ghost — кнопки с контуром и иконкой (вверху слева).
+
+Link / Text — текстовые кнопки без фона (вверху справа). */
+
+.btn {
+  text-decoration: none;
+}
+
+.btn-primary {
+  padding: 16px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  background-color: var(--primary);
+  color: var(--primary-black);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 100%;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover);
+}
+
+.btn-primary:active {
+  background-color: var(--pressed);
+}
+
+.btn-secondary {
+  display: flex;
+  width: 129px;
+  padding: 16px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--background);
+  /* font-family: Inter; */
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 17px */
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+  padding: 4px 16px;
+  border-radius: 24px;
+  border: 1px solid var(--tertiary);
+  color: var(--foreground-muted, #71717a);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  transition:
+    border 0.15s ease,
+    color 0.15s ease;
+}
+
+.btn-ghost:hover {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-ghost:active {
+  border: 1px solid var(--pressed);
+  color: var(--pressed);
+}
 /* * {
     outline: 1px solid red;
 } */
@@ -32,34 +111,19 @@ ul {
   padding-inline: 24px;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.btn-primary {
-  background-color: var(--black);
-  color: var(--white);
-}
-
 .btn-secondary {
-  background-color: var(--mandarin);
+  background-color: var(--hover);
   color: var(--white);
 }
 
 .btn-secondary:hover {
-  background-color: var(--mandarin-hover);
+  background-color: var(--hover);
 }
 
 /* ------ HEADER ------ */
 
 .section-header {
-  background-color: var(--white-pure);
+  background-color: var(--white);
 }
 
 .container-header {
@@ -114,8 +178,8 @@ ul {
 
 /* ------ FOOTER ------ */
 .section-footer {
-  background-color: var(--black-footer);
-  color: var(--white-warm);
+  background-color: var(--inverse);
+  color: var(--background);
   padding: 64px 0 32px 0;
 }
 
@@ -130,7 +194,7 @@ ul {
 }
 
 .title-footer h2 {
-  color: var(--orage);
+  color: var(--primary);
   font-size: 50px;
   font-style: normal;
   font-weight: 900;
@@ -215,7 +279,7 @@ ul {
   position: absolute;
   left: 0;
   top: -22px;
-  background: var(--orage);
+  background: var(--primary);
   color: #000;
   font-size: 11px;
   padding: 2px 6px;
@@ -225,4 +289,53 @@ ul {
 
 .footer-nav__column-item {
   opacity: 0.5;
+}
+
+/* ------ MAIN ---- */
+
+/* ------ HERO ------ */
+
+.container-hero {
+}
+
+.container-title__hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-hero {
+}
+
+.title-hero__h1 {
+  font-family: "Inter Tight";
+  font-size: 64px;
+  /* font-style: normal; */
+  font-weight: 500;
+  line-height: 112%; /* 71.68px */
+  letter-spacing: -0.64px;
+  color: var(--primary);
+}
+
+.subtitle-hero {
+  padding: 0 0 0 20px;
+  width: 100%;
+  max-width: 425px;
+}
+
+.hero-description {
+  width: 100%;
+  max-width: 380px;
+  /* font-family: Inter; */
+  color: var(--primary-black);
+  font-size: 18px;
+  /* font-style: normal; */
+  font-weight: 300;
+  line-height: 188%; /* 33.84px */
+  letter-spacing: 0.144px;
+}
+
+.btn-service {
+  border: var(--tertiary) 1px solid;
+  display: flex;
+  align-items: center;
 }
